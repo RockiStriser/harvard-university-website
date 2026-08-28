@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harvard University</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">🎓 Harvard University</div>
+      <ul class="nav-menu">
+        <li><a href="#home" class="nav-link active" onclick="navigateTo('home')">Home</a></li>
+        <li><a href="#about" class="nav-link" onclick="navigateTo('about')">About</a></li>
+        <li><a href="#academics" class="nav-link" onclick="navigateTo('academics')">Academics</a></li>
+        <li><a href="#programs" class="nav-link" onclick="navigateTo('programs')">Programs</a></li>
+        <li><a href="#admissions" class="nav-link" onclick="navigateTo('admissions')">Admissions</a></li>
+        <li><a href="#contact" class="nav-link" onclick="navigateTo('contact')">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Harvard University</h1>
+      <p>Leading the world in education, research, and innovation since 1636</p>
+      <button class="cta-button" onclick="navigateTo('about')">Learn More</button>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About Harvard University</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>Harvard University stands as one of the world's most prestigious institutions, renowned for academic excellence, groundbreaking research, and distinguished leadership. Founded in 1636, Harvard has evolved from a modest college into a comprehensive university encompassing ten schools and several research centers across the globe.</p>
+          <p>Our mission is to educate the leaders and citizens of tomorrow through exceptional teaching and research that advances human understanding and promotes the greater good of society.</p>
+        </div>
+        <div id="history-container" class="history-box">
+          <h3>Our History</h3>
+          <p>Loading historical information...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Academics Section -->
+  <section id="academics" class="section">
+    <div class="container">
+      <h2>Academics at Harvard</h2>
+      <div class="academics-grid">
+        <div class="academic-card">
+          <h3>World-Class Faculty</h3>
+          <p>Learn from leading experts and researchers in their fields, including Nobel Prize winners and internationally recognized scholars.</p>
+        </div>
+        <div class="academic-card">
+          <h3>Rigorous Curriculum</h3>
+          <p>Our programs combine classical liberal arts education with cutting-edge research opportunities and practical experience.</p>
+        </div>
+        <div class="academic-card">
+          <h3>Research Opportunities</h3>
+          <p>Engage in groundbreaking research across numerous disciplines and contribute to advancing human knowledge.</p>
+        </div>
+        <div class="academic-card">
+          <h3>Global Perspective</h3>
+          <p>Study with students and faculty from around the world, gaining diverse perspectives and international experience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Programs Section -->
+  <section id="programs" class="section">
+    <div class="container">
+      <h2>Our Programs</h2>
+      <div id="programs-container" class="programs-grid">
+        <p>Loading programs...</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Admissions Section -->
+  <section id="admissions" class="section">
+    <div class="container">
+      <h2>Admissions</h2>
+      <div class="admissions-content">
+        <div class="admissions-info">
+          <h3>Join the Harvard Community</h3>
+          <p>Harvard seeks students who are intellectually curious, resilient, and committed to making a positive impact in the world.</p>
+          <ul class="admissions-list">
+            <li>✓ Holistic review process considering academic achievement and personal qualities</li>
+            <li>✓ Need-blind admissions for all applicants</li>
+            <li>✓ Financial aid available to support talented students from all backgrounds</li>
+            <li>✓ Application deadlines and requirements vary by program</li>
+          </ul>
+        </div>
+        <form id="admissionsForm" class="form">
+          <h3>Admissions Inquiry Form</h3>
+          <div class="form-group">
+            <label>Full Name *</label>
+            <input type="text" name="fullName" required>
+          </div>
+          <div class="form-group">
+            <label>Email *</label>
+            <input type="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="tel" name="phone">
+          </div>
+          <div class="form-group">
+            <label>Interested Program *</label>
+            <select name="program" required>
+              <option value="">Select a program</option>
+              <option value="Undergraduate">Undergraduate College</option>
+              <option value="Graduate Arts and Sciences">Graduate School of Arts and Sciences</option>
+              <option value="Business School">Harvard Business School</option>
+              <option value="Law School">Harvard Law School</option>
+              <option value="Medical School">Harvard Medical School</option>
+              <option value="Divinity School">Harvard Divinity School</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>GPA</label>
+            <input type="number" name="gpa" step="0.01" min="0" max="4">
+          </div>
+          <button type="submit" class="submit-btn">Submit Inquiry</button>
+          <div id="admissionsMessage" class="form-message"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3>Get in Touch</h3>
+          <p><strong>Address:</strong> Cambridge, Massachusetts 02138, USA</p>
+          <p><strong>Phone:</strong> (617) 495-1000</p>
+          <p><strong>Email:</strong> admissions@harvard.edu</p>
+          <div class="social-links">
+            <a href="#" class="social-link">Facebook</a>
+            <a href="#" class="social-link">Twitter</a>
+            <a href="#" class="social-link">Instagram</a>
+            <a href="#" class="social-link">LinkedIn</a>
+          </div>
+        </div>
+        <form id="contactForm" class="form">
+          <h3>Contact Form</h3>
+          <div class="form-group">
+            <label>Name *</label>
+            <input type="text" name="name" required>
+          </div>
+          <div class="form-group">
+            <label>Email *</label>
+            <input type="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label>Message *</label>
+            <textarea name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Message</button>
+          <div id="contactMessage" class="form-message"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Harvard University. All rights reserved.</p>
+      <p>Harvard University, Cambridge, MA | <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
